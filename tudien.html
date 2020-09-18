@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p>Thử tìm kiếm nghĩa của từ red,blue,green.</p><br>
+
+<input type="text" id="input" placeholder="English" ><br>
+
+<input type="button" id="search" value="Search" onclick="search()"><br>
+<p id="result"></p>
+</body>
+</html>
+<script>
+    function search(){
+        let eng=['red','blue','green'];
+        let vn=['đỏ','xanh dương','xanh lục'];
+        let a=document.getElementById('input').value;
+        for (i=0; i <eng.length; i++){
+            if (a == eng[i]){
+                document.getElementById('result').innerHTML=vn[eng.indexOf(a)]
+            }
+        }
+    }
+
+</script>
